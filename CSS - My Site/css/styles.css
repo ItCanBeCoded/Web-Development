@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 2;
+}
+
+h1{
+    padding-top: 100px;
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.624rem;
+    color:#939b62;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #939b62;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffb26b;
+}
+
+hr{
+    border: dotted #939b62 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+.top-container{
+    background-color: #ffb26b;
+    padding-top: 100px;
+  }
+.middle-container{
+    margin: 100px 0;
+    
+}
+.bottom-container{
+    background-color: #ffb26b;
+}
+
+.intro{
+    width: 30%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.contact-message{
+    width: 40%;
+    margin: 40px auto;
+}
+
+.top-cloud{
+    width: 15%;
+    margin: auto;
+    margin-right: 100px;
+}
+
+
+.bottom-cloud{
+    width: 15%;
+    margin: auto;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.dragon-pic{
+    width: 100%;
+    margin: auto;
+}
+
+.pics{
+    width: 50%;
+    margin: auto;
+}
+
+.skill-row{
+    width: 50%;
+    margin: auto;
+}
+
+.contact-me{
+    margin: auto;
+    margin-bottom: 0px;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.normal-weight{
+    font-weight: normal;
+}
+
+a{
+    color: #ffb26b;
+}
+
+.btn {
+    background: #ff7b54;
+    background-image: -webkit-linear-gradient(top, #ff7b54, #ffd56b);
+    background-image: -moz-linear-gradient(top, #ff7b54, #ffd56b);
+    background-image: -ms-linear-gradient(top, #ff7b54, #ffd56b);
+    background-image: -o-linear-gradient(top, #ff7b54, #ffd56b);
+    background-image: linear-gradient(to bottom, #ff7b54, #ffd56b);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #fc582f;
+    background-image: -webkit-linear-gradient(top, #fc582f, #f0b22d);
+    background-image: -moz-linear-gradient(top, #fc582f, #f0b22d);
+    background-image: -ms-linear-gradient(top, #fc582f, #f0b22d);
+    background-image: -o-linear-gradient(top, #fc582f, #f0b22d);
+    background-image: linear-gradient(to bottom, #fc582f, #f0b22d);
+    text-decoration: none;
+  }
+
+  .footer-link{
+      color: black;
+      margin: 10px 20px;
+      text-decoration: none;
+  }
+
+  .footer-link:hover{
+      color: #ffd56b;
+  }
+
+  .copyright{
+      color: #ffd56b;
+  }
