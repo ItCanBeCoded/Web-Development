@@ -5,10 +5,11 @@ body {
 #title {
     background-color: #ff4c68;
     color: white;
+    text-align: center;
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 h1 {
@@ -37,9 +38,10 @@ p {
     font-size: 25px;
 }
 
-.rotate {
-    padding: 20%;
+.title-image {
+    padding: 10% 0;
     transform: rotate(25deg);
+    position: absolute;
 }
 
 .icons {
@@ -57,6 +59,8 @@ p {
 
 #features{
     padding: 7% 15%;
+    position: relative;
+    background-color: white;
 }
 
 .feature-box{
@@ -132,4 +136,11 @@ p {
 
 .pricing-column {
     padding: 3%;
+}
+
+@media (max-width: 991px) {
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
 }
