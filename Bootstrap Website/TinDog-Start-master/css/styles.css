@@ -2,16 +2,6 @@ body {
     font-family: "Montserrat";
 }
 
-#title {
-    background-color: #ff4c68;
-    color: white;
-    text-align: center;
-}
-
-.container-fluid {
-    padding: 3% 15% 7%;
-}
-
 h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 4rem;
@@ -34,6 +24,16 @@ h3 {
 p {
     color: #afafaf;
     text-align: center;
+}
+
+#title {
+    background-color: #ff4c68;
+    color: white;
+    text-align: center;
+}
+
+.container-fluid {
+    padding: 3% 15% 7%;
 }
 
 .bold-font {
