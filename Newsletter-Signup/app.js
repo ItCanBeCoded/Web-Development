@@ -4,8 +4,10 @@ const request = require("request");
 
 const app = express();
 
-app.get("/", function(res, req){
-    req.sendFile(__dirname + "/signup.html");
+app.use(express.static("public"));
+
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/signup.html");
 });
 
 app.listen(3000, function(){
