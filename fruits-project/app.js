@@ -1,55 +1,37 @@
-const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
 // Connection URI
-const uri =
-  "mongodb://localhost:27017";
-// Create a new MongoClient
-const client = new MongoClient(uri, { useUnifiedTopology: true});
 
-async function run() {
-  try {
-    // Connect the client to the server
-    await client.connect();
-    // Establish and verify connection
+mongoose.connect("mongodb://localhost:27017/fruitsDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
-    const database = client.db("fruitsDB");
-    const collection = database.collection("fruits");
-    
-    
+const fruitSchema = new mongoose.Schema ({
+   name: String,
+   rating: Number,
+   review: String
+});
 
-    const fruitDocuments = [
-      {
-        name: "Orange",
-        score: 6,
-        review: "its juicy"
-      },
-      {
-        name: "Banana",
-        score: 9,
-        review: "Very tasty"
-      },
-      {
-      name: "Orange",
-      score: 6,
-      review: "its juicy"
-      }
-    ];
+const Fruit = mongoose.model("Fruit", fruitSchema);
 
-    const options = { ordered: true };
-    
-    const result = await collection.insertMany(fruitDocuments, options);
-    
-    console.log("${result.insertedCount} documents were inserted")
+const fruit = new Fruit({
+    name: "Apple",
+    rating: 7,
+    review: "Pretty solid as a fruit."
+});
 
+//fruit.save().then(() => console.log("fruiiittt"));
 
-  } finally {
-    // Ensures that the client will close when you finish/error
-    
-    await client.close();
-    
-    
-  }
-}
-run().catch(console.dir);
+const personSchema = new mongoose.Schema ({
+  name: String,
+  age: Number
+})
+
+const Person = mongoose.model("Person", personSchema);
+
+const person = new Person({
+    name: "John",
+    age: 37
+});
+
+   
 
 
 
