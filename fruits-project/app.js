@@ -11,6 +11,14 @@ const fruitSchema = new mongoose.Schema ({
 
 const Fruit = mongoose.model("Fruit", fruitSchema);
 
+const pineapple = new Fruit({
+  name: "Pineapple",
+  rating: 10,
+  review: "best fruit!"
+})
+
+pineapple.save();
+
 const kiwi = new Fruit({
     name: "kiwi",
     rating: 5,
@@ -40,17 +48,38 @@ const banana = new Fruit({
 
 const personSchema = new mongoose.Schema ({
   name: String,
-  age: Number
+  age: Number,
+  favoriteFruit: fruitSchema
 })
 
 const Person = mongoose.model("Person", personSchema);
 
 const person = new Person({
-    name: "John",
-    age: 37
+    name: "Amy",
+    age: 12,
+    favoriteFruit: pineapple
 });
 
+Person.updateOne({name: "Steve", favoriteFruit: pineapple }, function(err){
+  if(err){
+    console.log(err)
+  }else {
+    console.log("updated!");
+  }
+})
+
 // person.save().then(() => console.log("person added!"));
+const _ids = ["6025a6e3e501621728a33935", "6025b77a6cf3250cbc949b58", "6025b77a6cf3250cbc949b57" , "6025b77a6cf3250cbc949b59"]
+
+Fruit.deleteMany({_id: {$in: _ids} }, function(err){
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("deleted up yup");
+  }
+});
+
+
    
 Fruit.find(function(err, fruits){
   if(err){
@@ -66,11 +95,11 @@ Fruit.find(function(err, fruits){
 })
 
 
-Person.deleteOne({_id: "6025b29d3dae210428da82c0"}, function(err){
+Person.deleteOne({_id: "6027fb569ac77809207771f7"}, function(err){
   if(err){
     console.log(err);
 } else {
   console.log("successfully deleted");
 }
-
 })
+
