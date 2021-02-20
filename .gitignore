@@ -2,3 +2,8 @@
 __MACOSX
 ._.DS_Store
 node_modules
+Authentication/.env
+Authentication/views/partials/footer.ejs
+Authentication/views/home.ejs
+Authentication/public/css/styles.css
+Authentication/.env
